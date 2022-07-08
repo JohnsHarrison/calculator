@@ -2,7 +2,9 @@ import {useState} from 'react'
 function Calculator(){
 const [value1, setValue1] = useState(0)
 const [value2, setValue2] = useState(0)
+const [ops,setOps] = useState('+')
 let result;
+// let ops = '+'
 // const [result,setResult] = useState(0)
 // let newNum;
 // function add(num1,num2){
@@ -20,6 +22,12 @@ if(isNaN(value2)){
     alert('please enter a number')
     setValue2(0)
 }
+
+// function changeOps(event){
+// return ops = event
+// }
+
+
 console.log(value1)
 console.log(value2)
 console.log(result)
@@ -34,14 +42,16 @@ console.log(result)
 
     <input type="text" name="value1"  onChange ={e => setValue1(e.target.value)} />
 
-    <span>+</span>
+    <span>{ops}</span>
 
     <input type="text" name="value2" onChange = {e => setValue2(e.target.value)} />
 
     {/* <span><button onClick= {()=>(add(value1,value2))}> = </button> </span> */}
     {/* <span><button onClick= {()=>(setResult((parseInt(value1)+(parseInt(value2)))))}> = </button> </span> */}
     <span><button onClick= {()=>(localStorage.setItem(result,(parseInt(value1)+(parseInt(value2)))))}> = </button> </span>
+    <button className='ops' onClick={()=>setOps('-')}>-</button>
     
+  
 
     <h3>{localStorage.getItem(result)}</h3>
     
