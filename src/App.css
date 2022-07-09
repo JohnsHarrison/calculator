@@ -1,0 +1,64 @@
+.container {
+    top: 25%;
+    left: 35%;
+    border-style: solid;
+    border-color: black;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    position: absolute;
+    
+    
+}
+
+.add{
+    display: flex;
+   
+}
+
+.operator{
+    align-content: center;
+    margin: auto;
+    width: 10px;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+.display{
+text-align: center;
+font-size: 50px;
+margin: auto;
+}
+
+.select{
+width: 30px;
+height: 30px;
+text-align: center;
+}
+button{
+    width: 50px;
+    align-content: center;
+    margin: auto;
+    margin-right: 5px;
+    margin-left: 0;
+}
+input{
+    width: 50px;
+    align-content: center;
+    margin: auto;
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   margin-right: 40px;
+}
+
+h1{
+    text-align: center;
+}

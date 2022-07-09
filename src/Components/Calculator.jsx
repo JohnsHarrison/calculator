@@ -12,9 +12,18 @@ console.log(value2)
 
     return(
         <div className="container">
-
-  <h1>Add with React!</h1>
-
+ 
+  <h1>Calculator</h1>
+  <div className='text'>
+  <p>Select an operator</p>
+  <select className='select' value={ops} onChange={e => setOps(e.target.value)}>
+    <option value='+'>+</option>    
+    <option value='-'>-</option>
+    <option value='*'>*</option>
+    <option value='/'>/</option>
+    
+    </select>
+</div>
  
 
   <form className="add" onSubmit={ e => e.preventDefault()}>
@@ -27,7 +36,7 @@ console.log(value2)
         }
         }}/>
 
-    <span> {ops} </span>
+    <span className='operator'> {ops} </span>
 
     <input type="text" name="value2" value={value2} onChange={e => {
     const input = Number(e.target.value)
@@ -59,16 +68,10 @@ console.log(value2)
     }}>=</button>
 
 
-    <select value={ops} onChange={e => setOps(e.target.value)}>
-    <option value='+'>+</option>    
-    <option value='-'>-</option>
-    <option value='*'>*</option>
-    <option value='/'>/</option>
     
-    </select>
-    <h3>{results}</h3>
+    <h3 className='display'>{results}</h3>
 
-    <h3>Addition results go here!</h3>
+
 
   </form>
 
